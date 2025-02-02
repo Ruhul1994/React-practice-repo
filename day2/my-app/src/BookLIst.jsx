@@ -9,16 +9,19 @@ const Books = [
 ];
 function BookLIst() {
   return (
-    <ul>
+    <ul className="space-y-4">
       {
-        Books.map((book)=>(
-          <li key={book.id}>
-            <BookRow book ={book}/>
-          </li>
-        ))
+      Books.map((book) => (
+        <li 
+        key={book.id}
+        className="flex items-center justify-between bg-white rounded-md shadow"
+        >
+        <BookRow book={book}/>
+        </li>
+      ))
       }
     </ul>
-  )
+    )
 }
 
 export default BookLIst

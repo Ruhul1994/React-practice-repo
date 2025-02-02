@@ -4,8 +4,10 @@ import PropTypes from "prop-types";
 function BookDetails({ title, author }) {
   return (
     <div>
-    <h2>{title}</h2>
-    <p>{author}</p>
+    
+    <h2 className="text-lg font-semibold">{title}</h2>
+    <p className="text-gray-600">{author}</p>
+    
     </div>
   );
 }

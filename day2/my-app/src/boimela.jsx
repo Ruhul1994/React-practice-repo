@@ -4,7 +4,7 @@
 
  function boimela (){
    return(
-    <div>
+    <div className="p-4 border-4 rounded-2xl  box-border mx-6">
        <>
        <Header/>
        <Search/>

@@ -5,7 +5,7 @@ import BookDetails
 
 function BookRow({book}) {
   return (
-    <div>
+    <div className="flex items-center justify-between w-full p-4">
         <>
             <BookDetails title={book.title} author = {book.author}/>
             <FeatureBook />
