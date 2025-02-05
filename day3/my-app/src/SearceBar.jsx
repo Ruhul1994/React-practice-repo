@@ -1,10 +1,24 @@
+import { PropTypes } from 'prop-types';
 
-function SearchBar() {
+function SearchBar({ searchTerm, onSearchCar }) {
   return (
     <div>
-      <input type="text" placeholder="Search.." className="px-2  border rounded-md focus: outline-1 focus:ring-2 focus:ring-blue-500 shadow" />
+      <form>
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={(event) => onSearchCar(event.target.value)}
+          placeholder="Search.."
+          className="w-fit px-2 border rounded-md focus:outline-1 focus:ring-2 focus:ring-blue-500 shadow"
+        />
+      </form>
     </div>
-  )
+  );
 }
 
-export default SearchBar
+SearchBar.propTypes = {
+  searchTerm: PropTypes.string.isRequired,
+  onSearchCar: PropTypes.func.isRequired,
+};
+
+export default SearchBar;
