@@ -1,5 +1,5 @@
-import React from 'react'
-import { useState } from 'react'
+// import React from 'react'
+// import { useState } from 'react'
 
 
 // const user = {
@@ -41,21 +41,57 @@ import { useState } from 'react'
 // }
 
 
-const App = () => {
-  const [color, setColor] = useState('red')
-  return (
+// const App = () => {
+//   //  const [color, setColor] = useState('red')
+//   return (
    
+//     <div>
+//        {/* <h1>my favorite color is {color}</h1>
+//        const cl = {color}
+//       <button type='button' className='bg-{cl}-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={() => setColor('blue')}>
+//         blue
+//       </button> */}
+
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+/**
+ *  1. import useState from react;
+ * 2. import the button component
+ * 2. create a state variable and a function to update it
+ * 3. create a function to handle the click event
+ * 4. pass the function to the button as a prop
+ */
+
+import React, { useState } from 'react'
+import Button from './Button'
+import Togol from './Togol'
+
+const App = () => {
+  const [count, setCount] = useState(0)
+  const handleClick = () => {
+    setCount(count + 1)
+  }
+  const handleClickMinas = () => {
+    setCount(count - 1)
+    if (count <= 0) {
+      setCount(0)
+    }
+  }
+  return (
     <div>
-       <h1>my favorite color is {color}</h1>
-       const cl = {color}
-      <button type='button' className='bg-{cl}-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={() => setColor('blue')}>
-        blue
-      </button>
+      <h1 className='bg-green-300 text-5xl'>Click the button the count is <span className='text-red-400'>{count}</span></h1>
+      <Button content='Click me' handel={handleClick} />
+      <Button content='Click me' handel={handleClickMinas} />
+
+      <Togol/>
+
     </div>
   )
 }
 
 export default App
-
-
-
