@@ -70,9 +70,11 @@
 import React, { useState } from 'react'
 import Button from './Button'
 import Togol from './Togol'
+import Input from './Input'
 
 const App = () => {
   const [count, setCount] = useState(0)
+  const [inputValue, setInputValue] = useState('Ruhul')
   const handleClick = () => {
     setCount(count + 1)
   }
@@ -82,6 +84,14 @@ const App = () => {
       setCount(0)
     }
   }
+  const handleInput = ()=>{
+    setInputValue("")
+
+  }
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value)
+  }
+
   return (
     <div>
       <h1 className='bg-green-300 text-5xl'>Click the button the count is <span className='text-red-400'>{count}</span></h1>
@@ -89,6 +99,11 @@ const App = () => {
       <Button content='Click me' handel={handleClickMinas} />
 
       <Togol/>
+      
+      <Input inputValue = {inputValue} handleInputChange={handleInputChange }/>
+      <h2>{inputValue}</h2>
+      <Button content='clear' handel={handleInput} />
+
 
     </div>
   )
