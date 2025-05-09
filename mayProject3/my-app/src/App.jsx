@@ -71,6 +71,7 @@ import React, { useState } from 'react'
 import Button from './Button'
 import Togol from './Togol'
 import Input from './Input'
+import Check from './Check'
 
 const App = () => {
   const [count, setCount] = useState(0)
@@ -101,8 +102,9 @@ const App = () => {
       <Togol/>
       
       <Input inputValue = {inputValue} handleInputChange={handleInputChange }/>
-      <h2>{inputValue}</h2>
+      {inputValue?<h2 className='bg-green-300 text-5xl m-4 p-4 rounded inline-block'>{inputValue}</h2>:null}
       <Button content='clear' handel={handleInput} />
+      <Check/>
 
 
     </div>
