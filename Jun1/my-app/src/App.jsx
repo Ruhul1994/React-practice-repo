@@ -1,8 +1,10 @@
 
 import { useState } from "react"
 import Skill from "./Skill";
+import Radio from "./Radio";
 
 const App = () => {
+  const [gender, setGender] = useState();
   const [skills, setSkills] = useState([]);
   const [display, setDisplay] = useState(true);
   const [name, setName] = useState("Ruhul");
@@ -26,10 +28,11 @@ const App = () => {
         placeholder="Enter your age"
         className="border border-gray-300 p-2 m-4 rounded mb-4"
      />
+     <Radio gender={gender} setGender={setGender}/>
      <Skill skills={skills} setSkills={setSkills}/>
       <button
         onClick={() => {
-          setSubmitted({ name, age, skills });
+          setSubmitted({ name, age, skills,gender });
         }}
           className='bg-blue-500 text-white p-2 m-4 cursor-pointer rounded'
           style={{ display: name && age ? 'block' : 'none' }}
@@ -41,6 +44,7 @@ const App = () => {
             <p>Your name is: {submitted.name}</p>
             <p>Your age is: {submitted.age}</p>
             <p>Your skills are: {submitted.skills.length > 0 ? submitted.skills.join(', ') : 'No skills selected'}</p>
+            <p>Your gender is: {submitted.gender || "Not selected"}</p>
           </div>
               )} 
               {
@@ -53,6 +57,7 @@ const App = () => {
             setName("");
             setAge("");
             setSkills([]);
+            setGender("")
           }} className='bg-red-400 text-white p-2 m-4 cursor-pointer rounded'>Clear</button>
         </div>
       )
