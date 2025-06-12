@@ -1,9 +1,13 @@
 
 import { useState } from "react"
 import Skill from "./Skill";
+import Array from "./Array";
 import Radio from "./Radio";
+import District from "./District";
+import Clock from "./Clock";
 
 const App = () => {
+  const [district, setDistrict] = useState("");
   const [gender, setGender] = useState();
   const [skills, setSkills] = useState([]);
   const [display, setDisplay] = useState(true);
@@ -30,9 +34,10 @@ const App = () => {
      />
      <Radio gender={gender} setGender={setGender}/>
      <Skill skills={skills} setSkills={setSkills}/>
+      <District setDistrict={setDistrict}/>
       <button
         onClick={() => {
-          setSubmitted({ name, age, skills,gender });
+          setSubmitted({ name, age, skills,gender, district });
         }}
           className='bg-blue-500 text-white p-2 m-4 cursor-pointer rounded'
           style={{ display: name && age ? 'block' : 'none' }}
@@ -45,6 +50,7 @@ const App = () => {
             <p>Your age is: {submitted.age}</p>
             <p>Your skills are: {submitted.skills.length > 0 ? submitted.skills.join(', ') : 'No skills selected'}</p>
             <p>Your gender is: {submitted.gender || "Not selected"}</p>
+            <p>Your district is: {submitted.district || "Not selected"}</p>
           </div>
               )} 
               {
@@ -58,10 +64,14 @@ const App = () => {
             setAge("");
             setSkills([]);
             setGender("")
+            setDistrict("");
           }} className='bg-red-400 text-white p-2 m-4 cursor-pointer rounded'>Clear</button>
         </div>
       )
       }
+      <Clock />
+      <Array />
+      
     </div>
   )
 }
