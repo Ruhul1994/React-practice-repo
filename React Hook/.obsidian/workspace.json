@@ -1,0 +1,182 @@
+{
+  "main": {
+    "id": "c58925f4cc47dca6",
+    "type": "split",
+    "children": [
+      {
+        "id": "a4861e98a41ca885",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4c02e76f02a05a31",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Component life cycles 🚴.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Component life cycles 🚴"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "74a10f029a629173",
+    "type": "split",
+    "children": [
+      {
+        "id": "b71b80e426acf188",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "df878f478a92141c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "28fe4ad297a2944f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "5df10a234c566edc",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "61bd468c3a48db3f",
+    "type": "split",
+    "children": [
+      {
+        "id": "951e183ba1799668",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "43ca767f19b3866f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "React Hook.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for React Hook"
+            }
+          },
+          {
+            "id": "34f4637357f5d22d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "React Hook.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from React Hook"
+            }
+          },
+          {
+            "id": "88a2f776fb611ba4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "43f7bdf809761779",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "React Hook.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of React Hook"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "4c02e76f02a05a31",
+  "lastOpenFiles": [
+    "Inline style React.md",
+    "UseEffect().md",
+    "create a link.md",
+    "Welcome.md",
+    "Component life cycles 🚴.md",
+    "component life cycles 🚴.canvas",
+    "2025-06-14.md"
+  ]
+}

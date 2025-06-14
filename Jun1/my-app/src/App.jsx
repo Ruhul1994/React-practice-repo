@@ -1,5 +1,5 @@
 
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import Skill from "./Skill";
 import Array from "./Array";
 import Radio from "./Radio";
@@ -14,6 +14,15 @@ const App = () => {
   const [name, setName] = useState("Ruhul");
   const [age, setAge] = useState("1");
   const [submitted, setSubmitted] = useState(null);
+  const showMassage = () => {
+    alert("welcome to the world of React");
+  }
+  useEffect(() => {
+    showMassage();
+    return () => {
+      console.log("Component unmounted");
+    }
+  }, [display]);
   return (
     <div>
       {display? <h1 className='text-2xl bg-blue-500'>Hello world</h1>:null}
