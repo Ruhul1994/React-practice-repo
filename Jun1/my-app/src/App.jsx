@@ -1,5 +1,5 @@
-
-import { useState,useEffect } from "react"
+import{ useFormStatus } from "react-dom";
+import { useState,useEffect,useRef,} from "react"
 import Skill from "./Skill";
 import Array from "./Array";
 import Radio from "./Radio";
@@ -14,6 +14,11 @@ const App = () => {
   const [name, setName] = useState("Ruhul");
   const [age, setAge] = useState("1");
   const [submitted, setSubmitted] = useState(null);
+  const handelForm = async() => {
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    console.log("Form submitted");
+  }
+  const { pending } = useFormStatus();
   
   useEffect(() => {
     showMassage();
@@ -21,6 +26,8 @@ const App = () => {
       console.log("Component unmounted");
     }
   },[display]);
+  const inputRef = useRef(null);
+  inputRef.current?.focus();
   const showMassage = () => {
     console.log("welcome to the world of React");
   }
@@ -31,7 +38,8 @@ const App = () => {
         Toggle Display
       </button>
       <br />
-     <input type="text" value={name} name="name" id="age" 
+      <form action={handelForm}>
+     <input type="text" ref={inputRef} value={name} name="name" id="age" 
         onChange={(e) => setName(e.target.value)} 
         placeholder="Enter your name" 
         className="border border-gray-300 p-2  rounded mb-4"
@@ -52,7 +60,7 @@ const App = () => {
           className='bg-blue-500 text-white p-2 m-4 cursor-pointer rounded'
           style={{ display: name && age ? 'block' : 'none' }}
               >
-          submit
+          {pending ? "Submitting..." : "Submit"}
               </button>
               {submitted && (
           <div>
@@ -79,6 +87,7 @@ const App = () => {
         </div>
       )
       }
+      </form>
       <Clock />
       <Array />
       
