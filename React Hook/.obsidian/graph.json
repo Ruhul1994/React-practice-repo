@@ -8,10 +8,24 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "React",
+      "query": "path:\"React 19\"  ",
       "color": {
         "a": 1,
-        "rgb": 14048348
+        "rgb": 1568468
+      }
+    },
+    {
+      "query": "path:\"Next.js 15\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 14069084
+      }
+    },
+    {
+      "query": "path:\"important info for job\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 11392604
       }
     }
   ],
@@ -25,6 +39,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 1.9655560456566747,
+  "scale": 1.0000000000000064,
   "close": true
 }

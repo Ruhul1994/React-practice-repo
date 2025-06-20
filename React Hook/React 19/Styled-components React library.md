@@ -90,3 +90,4 @@ For more details, check the official documentation at [styled-components.com](ht
 
 [[CSS Module files]]
 [[Inline style React]]
+[[Component life cycles 🚴]]
