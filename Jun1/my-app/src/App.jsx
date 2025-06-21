@@ -1,18 +1,21 @@
-import { useState, useEffect, useRef, useTransition } from "react";
+import { useState, useEffect, useRef, useTransition} from "react";
 import Skill from "./Skill";
 import Radio from "./Radio";
 import District from "./District";
 import Clock from "./Clock";
 import User from "./User";
 import Patnar from './Patnar';
+import useIncrement from "./useIncrement"; // Importing the custom hook
+
 
 const App = () => {
-  const [district, setDistrict] = useState("");
+  const [count, increment, decrement, reset] = useIncrement(0);
   const [gender, setGender] = useState();
   const [skills, setSkills] = useState([]);
   const [display, setDisplay] = useState(true);
   const [name, setName] = useState("Ruhul");
   const [age, setAge] = useState("1");
+  const [district, setDistrict] = useState(""); // <-- added district state
   const [submitted, setSubmitted] = useState(null);
   const [showUserList, setShowUserList] = useState(false); // <-- add this
   const [data, setData] = useState({
@@ -132,6 +135,13 @@ const handelCity = (e) => {
        <p>Your City name is: {data.City}</p>
        <hr />
        <Patnar/>
+       <hr/>
+       <div>
+       <h1>The number:{count}</h1>
+      <button onClick={increment} className='bg-blue-500 text-white p-2 m-4 cursor-pointer rounded'>Increment</button>
+      <button onClick={decrement} className='bg-red-500 text-white p-2 m-4 cursor-pointer rounded'>Decrement</button>
+      <button onClick={reset} className='bg-yellow-500 text-white p-2 m-4 cursor-pointer rounded'>Reset</button>
+      </div>
     </div>
     
   )
