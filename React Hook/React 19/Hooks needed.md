@@ -5,15 +5,15 @@ In a React project, the number of **hooks** you need for a job-ready project or 
 
 ### ✅ **Core Hooks (You MUST know – 100% expected)**
 
-|Hook|Use case|Common in|
-|---|---|---|
-|`useState`|Managing local component state|Work + Viva|
-|`useEffect`|Side effects (fetching data, timers, etc.)|Work + Viva|
-|`useRef`|Accessing DOM, storing values across renders|Work + Viva|
-|`useContext`|Global state / theming / language switching|Work + Viva|
-|`useCallback`|Optimizing child components|Viva (for optimization questions)|
-|`useMemo`|Memoizing values|Viva|
-|`useReducer`|Managing complex state (like Redux lite)|Work (larger apps)|
+| Hook          | Use case                                     | Common in                         |
+| ------------- | -------------------------------------------- | --------------------------------- |
+| `useState`    | Managing local component state               | Work + Viva                       |
+| `useEffect`   | Side effects (fetching data, timers, etc.)   | Work + Viva                       |
+| `useRef`      | Accessing DOM, storing values across renders | Work + Viva                       |
+| `useContext`  | Global state / theming / language switching  | Work + Viva                       |
+| `useCallback` | Optimizing child components                  | Viva (for optimization questions) |
+| `useMemo`     | Memoizing values                             | Viva                              |
+| `useReducer`  | Managing complex state (like Redux lite)     | Work (larger apps)                |
 
 ---
 

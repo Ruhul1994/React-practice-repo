@@ -79,3 +79,8 @@ setUser(user);          // ❌ This causes bugs and won't re-render
 ---
 
 Would you like a version where you're updating a **list of objects** (like an array of users), too?
+
+
+[[Lifting State Up]]
+[[pass function as a props]]
+[[UseRef HOOK]]

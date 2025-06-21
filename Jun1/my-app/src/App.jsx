@@ -4,6 +4,7 @@ import Radio from "./Radio";
 import District from "./District";
 import Clock from "./Clock";
 import User from "./User";
+import Patnar from './Patnar';
 
 const App = () => {
   const [district, setDistrict] = useState("");
@@ -14,6 +15,13 @@ const App = () => {
   const [age, setAge] = useState("1");
   const [submitted, setSubmitted] = useState(null);
   const [showUserList, setShowUserList] = useState(false); // <-- add this
+  const [data, setData] = useState({
+    City: "Dhaka",
+    Country: "Bangladesh",
+    Zip: "1212",
+    Address: "Mirpur-1, Dhaka",
+    Phone: "01712345678",
+  });
   const inputRef = useRef(null);
 
   const [isPending, startTransition] = useTransition();
@@ -33,6 +41,14 @@ const App = () => {
     console.log("welcome to the world of React");
   }
 
+const handelCity = (e) => {
+    const { value } = e.target;
+    data.City = value;
+    setData({
+      ...data,
+    });
+  }
+
   const handelForm = (e) => {
     e.preventDefault();
     startTransition(async () => {
@@ -43,7 +59,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className='p-4 border-2 mx-4 border-gray-300 rounded shadow-md bg-white' ml-4>
       {display ? <h1 className='text-2xl bg-blue-500'>Hello world</h1> : null}
       <button onClick={() => setDisplay(!display)} className='bg-black text-white p-2 m-4 cursor-pointer rounded'>Toggle Display</button>
       <form onSubmit={handelForm}>
@@ -108,7 +124,16 @@ const App = () => {
       <button onClick={() => setShowUserList((prev) => !prev)} className='bg-green-500 text-white p-2 m-4 cursor-pointer rounded'>
         {showUserList ? "Hide User List" : "Show User List"}
       </button>
+
+      <div>
+        <label htmlFor="cityName">City: </label><br />
+        <input type="text" onChange={handelCity} name="cityName" className="p-1" placeholder="city Name.." id="cityName" value={data.City} />
+      </div>
+       <p>Your City name is: {data.City}</p>
+       <hr />
+       <Patnar/>
     </div>
+    
   )
 }
 
