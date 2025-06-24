@@ -1,14 +1,17 @@
-import { useState, useEffect, useRef, useTransition} from "react";
+import { useState, useEffect, useRef, useTransition } from "react";
 import Skill from "./Skill";
 import Radio from "./Radio";
 import District from "./District";
 import Clock from "./Clock";
 import User from "./User";
 import Patnar from './Patnar';
-import useIncrement from "./useIncrement"; // Importing the custom hook
+import useIncrement from "./useIncrement";
+import { UserContext } from './contexApi01';
+import UseContext from './UseContext';
 
 
 const App = () => {
+  const [theme, setTheme] = useState("light");
   const [count, increment, decrement, reset] = useIncrement(0);
   const [gender, setGender] = useState();
   const [skills, setSkills] = useState([]);
@@ -28,6 +31,8 @@ const App = () => {
   const inputRef = useRef(null);
 
   const [isPending, startTransition] = useTransition();
+
+
 
   useEffect(() => {
     showMassage();
@@ -50,7 +55,9 @@ const handelCity = (e) => {
     setData({
       ...data,
     });
-  }
+  };
+
+
 
   const handelForm = (e) => {
     e.preventDefault();
@@ -61,6 +68,7 @@ const handelCity = (e) => {
     });
   };
 
+   
   return (
     <div className='p-4 border-2 mx-4 border-gray-300 rounded shadow-md bg-white' ml-4>
       {display ? <h1 className='text-2xl bg-blue-500'>Hello world</h1> : null}
@@ -142,8 +150,10 @@ const handelCity = (e) => {
       <button onClick={decrement} className='bg-red-500 text-white p-2 m-4 cursor-pointer rounded'>Decrement</button>
       <button onClick={reset} className='bg-yellow-500 text-white p-2 m-4 cursor-pointer rounded'>Reset</button>
       </div>
+      <UserContext.Provider value={{ theme, setTheme }}>
+        <UseContext/>
+      </UserContext.Provider>
     </div>
-    
   )
 }
 

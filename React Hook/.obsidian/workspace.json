@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "40f4b796a775c81d",
+            "id": "74287f860dae16e2",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -165,8 +165,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "40f4b796a775c81d",
+  "active": "74287f860dae16e2",
   "lastOpenFiles": [
+    "React 19/Context API.md",
+    "React 19/Hooks needed.md",
     "React 19/useTransition() Hook.md",
     "React 19/useActionState.md",
     "React 19/Derived state react.md",
@@ -175,7 +177,6 @@
     "React 19/useId Hook.md",
     "React 19/UseEffect().md",
     "Untitled",
-    "React 19/Hooks needed.md",
     "React 19/updating an array by state.md",
     "React 19/update an object in state.md",
     "Next.js 15/image loading problems.md",
@@ -198,7 +199,6 @@
     "React 19/CSS Module files.md",
     "React 19",
     "React 19/Inline style React.md",
-    "create a link.md",
     "component life cycles 🚴.canvas"
   ]
 }
