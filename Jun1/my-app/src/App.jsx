@@ -6,8 +6,11 @@ import Clock from "./Clock";
 import User from "./User";
 import Patnar from './Patnar';
 import useIncrement from "./useIncrement";
-import { UserContext } from './contexApi01';
-import UseContext from './UseContext';
+import { UserContext } from './contexApi01'; 
+
+
+
+
 
 
 const App = () => {
@@ -150,8 +153,10 @@ const handelCity = (e) => {
       <button onClick={decrement} className='bg-red-500 text-white p-2 m-4 cursor-pointer rounded'>Decrement</button>
       <button onClick={reset} className='bg-yellow-500 text-white p-2 m-4 cursor-pointer rounded'>Reset</button>
       </div>
+
       <UserContext.Provider value={{ theme, setTheme }}>
-        <UseContext/>
+        <h1 className='text-3xl text-center font-bold'>Use-Context</h1>
+        <Child/>
       </UserContext.Provider>
     </div>
   )
