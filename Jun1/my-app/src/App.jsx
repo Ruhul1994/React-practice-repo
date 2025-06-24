@@ -6,7 +6,7 @@ import Clock from "./Clock";
 import User from "./User";
 import Patnar from './Patnar';
 import useIncrement from "./useIncrement";
-import { UserContext } from './contexApi01'; 
+import UserContext from './contexApi01'; // Default import
 import Component2 from './component2';
 
 const App = () => {
