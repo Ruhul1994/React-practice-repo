@@ -7,11 +7,7 @@ import User from "./User";
 import Patnar from './Patnar';
 import useIncrement from "./useIncrement";
 import { UserContext } from './contexApi01'; 
-
-
-
-
-
+import Component2 from './component2';
 
 const App = () => {
   const [theme, setTheme] = useState("light");
@@ -155,8 +151,7 @@ const handelCity = (e) => {
       </div>
 
       <UserContext.Provider value={{ theme, setTheme }}>
-        <h1 className='text-3xl text-center font-bold'>Use-Context</h1>
-        <Child/>
+      <Component2 />
       </UserContext.Provider>
     </div>
   )
