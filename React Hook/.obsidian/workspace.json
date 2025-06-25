@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e4926f5abaac6e32",
+        "id": "5c12a25116c4527b",
         "type": "tabs",
         "children": [
           {
-            "id": "74287f860dae16e2",
+            "id": "dbaf84055b2c7093",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -165,19 +165,28 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "74287f860dae16e2",
+  "active": "df878f478a92141c",
   "lastOpenFiles": [
     "React 19/Context API.md",
-    "React 19/Hooks needed.md",
+    "React 19/Link vs NavLink.md",
     "React 19/useTransition() Hook.md",
+    "React 19/Router Optional Segment.md",
+    "React 19/Dynamic Routing.md",
+    "React 19/useParams().md",
+    "React 19/Layout Route && Index Route.md",
+    "React 19/Nested Routes.md",
+    "React 19/Hooks needed.md",
+    "React 19/route prefix.md",
+    "React 19/Custom Hook.md",
+    "React 19/updating an array by state.md",
+    "React 19/React Router.md",
+    "React 19/UseRef HOOK.md",
     "React 19/useActionState.md",
     "React 19/Derived state react.md",
-    "React 19/Custom Hook.md",
     "React 19/Fragment in React.md",
     "React 19/useId Hook.md",
     "React 19/UseEffect().md",
     "Untitled",
-    "React 19/updating an array by state.md",
     "React 19/update an object in state.md",
     "Next.js 15/image loading problems.md",
     "Next.js 15",
@@ -187,18 +196,9 @@
     "important info for job/for job info.md",
     "important info for job/wellfound.com.md",
     "important info for job",
-    "React 19/UseRef HOOK.md",
-    "React 19/pass function as a props.md",
-    "React 19/Styled-components React library.md",
-    "React 19/Pure Component React.md",
     "Info daily",
-    "React 19/Component life cycles 🚴.md",
-    "React 19/forwordRef ().md",
-    "CSS🤬/shapes.md",
     "CSS🤬",
-    "React 19/CSS Module files.md",
     "React 19",
-    "React 19/Inline style React.md",
     "component life cycles 🚴.canvas"
   ]
 }

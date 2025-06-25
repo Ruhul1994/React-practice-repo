@@ -1,13 +1,17 @@
 import { useState, useEffect, useRef, useTransition } from "react";
+import { Routes, Route } from "react-router-dom";
 import Skill from "./Skill";
 import Radio from "./Radio";
 import District from "./District";
 import Clock from "./Clock";
 import User from "./User";
-import Patnar from './Patnar';
+import Patnar from "./Patnar";
 import useIncrement from "./useIncrement";
-import UserContext from './contexApi01'; // Default import
-import Component2 from './component2';
+import UserContext from "./contexApi01"; // Default import
+import Component2 from "./component2";
+import Contract from "./Contract";
+import About from "./About";
+import NavBar from "./NavBar";
 
 const App = () => {
   const [theme, setTheme] = useState("light");
@@ -31,13 +35,11 @@ const App = () => {
 
   const [isPending, startTransition] = useTransition();
 
-
-
   useEffect(() => {
     showMassage();
     return () => {
       console.log("Component unmounted");
-    }
+    };
   }, [display]);
 
   useEffect(() => {
@@ -46,17 +48,15 @@ const App = () => {
 
   const showMassage = () => {
     console.log("welcome to the world of React");
-  }
+  };
 
-const handelCity = (e) => {
+  const handelCity = (e) => {
     const { value } = e.target;
     data.City = value;
     setData({
       ...data,
     });
   };
-
-
 
   const handelForm = (e) => {
     e.preventDefault();
@@ -67,11 +67,28 @@ const handelCity = (e) => {
     });
   };
 
-   
   return (
-    <div className='p-4 border-2 mx-4 border-gray-300 rounded shadow-md bg-white' ml-4>
-      {display ? <h1 className='text-2xl bg-blue-500'>Hello world</h1> : null}
-      <button onClick={() => setDisplay(!display)} className='bg-black text-white p-2 m-4 cursor-pointer rounded'>Toggle Display</button>
+    <div
+      className="p-4 border-2 mx-4 border-gray-300 rounded shadow-md bg-white"
+      ml-4
+    >
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/contract" element={<Contract />} />
+        <Route
+          path="/*"
+          element={<h1 className="text-2xl text-red-500">404 Not Found</h1>}
+        />
+      </Routes>
+      {display ? <h1 className="text-2xl bg-blue-500">Hello world</h1> : null}
+      <button
+        onClick={() => setDisplay(!display)}
+        className="bg-black text-white p-2 m-4 cursor-pointer rounded"
+      >
+        Toggle Display
+      </button>
       <form onSubmit={handelForm}>
         <input
           type="text"
@@ -97,8 +114,8 @@ const handelCity = (e) => {
         <District setDistrict={setDistrict} />
         <button
           type="submit"
-          className='bg-blue-500 text-white p-2 m-4 cursor-pointer rounded'
-          style={{ display: name && age ? 'block' : 'none' }}
+          className="bg-blue-500 text-white p-2 m-4 cursor-pointer rounded"
+          style={{ display: name && age ? "block" : "none" }}
           disabled={isPending}
         >
           {isPending ? "Submitting..." : "Submit"}
@@ -107,54 +124,93 @@ const handelCity = (e) => {
           <div>
             <p>Your name is: {submitted.name}</p>
             <p>Your age is: {submitted.age}</p>
-            <p>Your skills are: {submitted.skills.length > 0 ? submitted.skills.join(', ') : 'No skills selected'}</p>
+            <p>
+              Your skills are:{" "}
+              {submitted.skills.length > 0
+                ? submitted.skills.join(", ")
+                : "No skills selected"}
+            </p>
             <p>Your gender is: {submitted.gender || "Not selected"}</p>
             <p>Your district is: {submitted.district || "Not selected"}</p>
-            <p className='text-green-500'>Form submitted successfully!</p>
-            <button onClick={() => {
-              setSubmitted(null);
-              setName("");
-              setAge("");
-              setSkills([]);
-              setGender("");
-              setDistrict("");
-            }} className='bg-red-400 text-white p-2 m-4 cursor-pointer rounded'>Clear</button>
+            <p className="text-green-500">Form submitted successfully!</p>
+            <button
+              onClick={() => {
+                setSubmitted(null);
+                setName("");
+                setAge("");
+                setSkills([]);
+                setGender("");
+                setDistrict("");
+              }}
+              className="bg-red-400 text-white p-2 m-4 cursor-pointer rounded"
+            >
+              Clear
+            </button>
           </div>
         )}
       </form>
       <Clock />
       {isPending && (
         <img
-          src='https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ALoading_icon.gif&psig=AOvVaw3qtL5M7C4Ow3939NIeA4Fo&ust=1750296792544000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOC81ubp-Y0DFQAAAAAdAAAAABBM'
+          src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ALoading_icon.gif&psig=AOvVaw3qtL5M7C4Ow3939NIeA4Fo&ust=1750296792544000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOC81ubp-Y0DFQAAAAAdAAAAABBM"
           alt="LoadingImg"
           style={{ width: "40px", display: "block", margin: "20px auto" }}
         />
       )}
-      {showUserList ? <User isPending={isPending} startTransition={startTransition} /> : null}
-      <button onClick={() => setShowUserList((prev) => !prev)} className='bg-green-500 text-white p-2 m-4 cursor-pointer rounded'>
+      {showUserList ? (
+        <User isPending={isPending} startTransition={startTransition} />
+      ) : null}
+      <button
+        onClick={() => setShowUserList((prev) => !prev)}
+        className="bg-green-500 text-white p-2 m-4 cursor-pointer rounded"
+      >
         {showUserList ? "Hide User List" : "Show User List"}
       </button>
 
       <div>
-        <label htmlFor="cityName">City: </label><br />
-        <input type="text" onChange={handelCity} name="cityName" className="p-1" placeholder="city Name.." id="cityName" value={data.City} />
+        <label htmlFor="cityName">City: </label>
+        <br />
+        <input
+          type="text"
+          onChange={handelCity}
+          name="cityName"
+          className="p-1"
+          placeholder="city Name.."
+          id="cityName"
+          value={data.City}
+        />
       </div>
-       <p>Your City name is: {data.City}</p>
-       <hr />
-       <Patnar/>
-       <hr/>
-       <div>
-       <h1>The number:{count}</h1>
-      <button onClick={increment} className='bg-blue-500 text-white p-2 m-4 cursor-pointer rounded'>Increment</button>
-      <button onClick={decrement} className='bg-red-500 text-white p-2 m-4 cursor-pointer rounded'>Decrement</button>
-      <button onClick={reset} className='bg-yellow-500 text-white p-2 m-4 cursor-pointer rounded'>Reset</button>
+      <p>Your City name is: {data.City}</p>
+      <hr />
+      <Patnar />
+      <hr />
+      <div>
+        <h1>The number:{count}</h1>
+        <button
+          onClick={increment}
+          className="bg-blue-500 text-white p-2 m-4 cursor-pointer rounded"
+        >
+          Increment
+        </button>
+        <button
+          onClick={decrement}
+          className="bg-red-500 text-white p-2 m-4 cursor-pointer rounded"
+        >
+          Decrement
+        </button>
+        <button
+          onClick={reset}
+          className="bg-yellow-500 text-white p-2 m-4 cursor-pointer rounded"
+        >
+          Reset
+        </button>
       </div>
 
       <UserContext.Provider value={{ theme, setTheme }}>
-      <Component2 />
+        <Component2 />
       </UserContext.Provider>
     </div>
-  )
-}
+  );
+};
 
 export default App;
