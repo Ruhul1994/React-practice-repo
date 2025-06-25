@@ -7,6 +7,8 @@ import Services from './Services';
 // import BlogPost from './BlogPost';
 import NotFound from './NotFound';
 import Header from './Header';
+import User from './User';
+import UserDetails from './UserDetails';
 
 const App = () => {
   return (
@@ -19,6 +21,9 @@ const App = () => {
         <Route path="/services" element={<Services />} />
         {/* <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogPost />} /> */}
+        <Route path="/user" element={<User />} />
+        <Route path="/user/:id" element={<UserDetails />} />
+        <Route path="/user/:id/:name?" element={<UserDetails />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

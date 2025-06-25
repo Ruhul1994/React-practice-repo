@@ -1,4 +1,4 @@
-In React 19, the new `useActionState` hook is introduced to simplify **handling form submissions** and **server actions** with better support for async logic and error handling.
+ In React 19, the new `useActionState` hook is introduced to simplify **handling form submissions** and **server actions** with better support for async logic and error handling.
 
 ---
 

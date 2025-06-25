@@ -12,10 +12,10 @@ const Header = () => {
                 <img
                     src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.RdeGpZXza_h9PibvVP-U5gHaFs%26r%3D0%26pid%3DApi&f=1&ipt=446535b3fd88cd9ea0617f3510f1c8d89962771860a9095a336968f906633f0d&ipo=images"
                     alt="Logo"
-                    width={40}
+                    width={50}
                     className="mr-3 rounded"
                 />
-                <span className="text-lg font-bold">My App</span>
+                <span className="text-lg font-bold">Ruhul co</span>
             </div>
             <nav>
                 <NavLink
@@ -23,6 +23,7 @@ const Header = () => {
                     className={({ isActive }) =>
                         `${navLinkClass} ${isActive ? activeClass : ""}`
                     }
+                 index
                 >
                     Home
                 </NavLink>
@@ -39,6 +40,7 @@ const Header = () => {
                     className={({ isActive }) =>
                         `${navLinkClass} ${isActive ? activeClass : ""}`
                     }
+                    index
                 >
                     Contact
                 </NavLink>
