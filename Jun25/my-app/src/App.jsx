@@ -1,15 +1,28 @@
-import React from 'react'
+import { Routes, Route } from 'react-router-dom';
+import Home from './Home';
+import About from './About';
+import Contact from './Contact';
+import Services from './Services';
+// import Blog from './Blog';
+// import BlogPost from './BlogPost';
+import NotFound from './NotFound';
+import Header from './Header';
 
 const App = () => {
   return (
     <div>
-      <h1 className='text-2xl bg-green-400'>Hello world</h1>
-      <p className='text-lg text-blue-600'>This is a simple React app with Tailwind CSS.</p>
-      <button className='bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600'>
-        Click Me
-      </button>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/services" element={<Services />} />
+        {/* <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<BlogPost />} /> */}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
