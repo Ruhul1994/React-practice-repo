@@ -90,12 +90,12 @@ function Counter() {
 
 ## 🎯 When to Use `useRef`
 
-|Situation|useRef?|
-|---|---|
-|Need to access a DOM element?|✅ Yes|
-|Need to store a value without triggering a re-render?|✅ Yes|
-|Want to trigger UI updates?|❌ Use `useState` instead|
-|Want to track previous state?|✅ useRef can store that|
+| Situation                                             | useRef?                  |
+| ----------------------------------------------------- | ------------------------ |
+| Need to access a DOM element?                         | ✅ Yes                    |
+| Need to store a value without triggering a re-render? | ✅ Yes                    |
+| Want to trigger UI updates?                           | ❌ Use `useState` instead |
+| Want to track previous state?                         | ✅ useRef can store that  |
 
 ---
 

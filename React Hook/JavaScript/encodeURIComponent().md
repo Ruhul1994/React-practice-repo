@@ -85,3 +85,4 @@ decodeURIComponent(encodedName)
 ---
 
 Would you like me to show how to decode it in React Route Params too?
+
