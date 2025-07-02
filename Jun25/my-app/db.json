@@ -1,41 +1,6 @@
 {
   "users": [
     {
-      "id": "1",
-      "name": "Ruhul Amin",
-      "age": 25,
-      "email": " ruhul@example.com",
-      "address": "Dhaka, Bangladesh"
-    },
-    {
-      "id": "2",
-      "name": "Amina Sultana",
-      "age": 22,
-      "email": " amina@example.com",
-      "address": "Chittagong, Bangladesh"
-    },
-    {
-      "id": "3",
-      "name": "Jamal Hossain",
-      "age": 30,
-      "email": "jamal@example.com",
-      "address": "Khulna, Bangladesh"
-    },
-    {
-      "id": "4",
-      "name": "Nasrin Akter",
-      "age": 28,
-      "email": " nasrin@example.com",
-      "address": "Rajshahi, Bangladesh"
-    },
-    {
-      "id": "5",
-      "name": "Shuvo Roy",
-      "age": 27,
-      "email": " shuvo@example.com",
-      "address": "Sylhet, Bangladesh"
-    },
-    {
       "id": "6",
       "name": "Tania Begum",
       "age": 24,
@@ -43,81 +8,25 @@
       "address": "Barisal, Bangladesh"
     },
     {
-      "id": "7",
-      "name": "Hasan Mahmud",
-      "age": 32,
-      "email": " hasan@example.com",
-      "address": "Rangpur, Bangladesh"
-    },
-    {
-      "id": "8",
-      "name": "Mim Chowdhury",
-      "age": 23,
-      "email": " mim@example.com",
-      "address": "Mymensingh, Bangladesh"
-    },
-    {
-      "id": "9",
-      "name": "Tanvir Rahman",
-      "age": 29,
-      "email": " tanvir@example.com",
-      "address": "Comilla, Bangladesh"
-    },
-    {
-      "id": "10",
-      "name": "Farzana Islam",
-      "age": 26,
-      "email": " farzana@example.com",
-      "address": "Jessore, Bangladesh"
-    },
-    {
-      "id": "10a3",
-      "name": "Nahid",
-      "age": 28,
-      "email": " nahid@example.com",
-      "address": "Dhaka, Bangladesh"
-    },
-    {
-      "id": "48c8",
-      "Name": "Mina ma",
-      "Age": "12",
-      "Email": "mina@example.com",
-      "Address": "cartun village"
-    },
-    {
-      "id": "7a2b",
       "Name": "Lima",
-      "Age": "16",
+      "Age": "8",
       "Email": "lima@example.com",
-      "Address": "USA"
+      "Address": "Dhaka",
+      "id": "7f0f"
     },
     {
-      "id": "2267",
-      "Name": "tomal",
-      "Age": "11",
-      "Email": "tomal@gmail.com",
-      "Address": "UA"
+      "Name": "tina",
+      "Age": "8",
+      "Email": "tina@example.com",
+      "Address": "fghjkl;perftgyuj",
+      "id": "aad8"
     },
     {
-      "id": "d695",
-      "Name": "Mina ma",
-      "Age": "19",
-      "Email": "mina@example.com",
-      "Address": "Dhaka"
-    },
-    {
-      "id": "6584",
-      "Name": "Lima",
-      "Age": "12",
-      "Email": "lima@example.com",
-      "Address": "Dhaka"
-    },
-    {
-      "id": "b169",
-      "Name": "Mina ma",
-      "Age": "10",
-      "Email": "mina@example.com",
-      "Address": "ghj./"
+      "id": "de38",
+      "Name": "tina",
+      "Age": "3",
+      "Email": "tina@example.com",
+      "Address": "gthjk"
     }
   ]
 }

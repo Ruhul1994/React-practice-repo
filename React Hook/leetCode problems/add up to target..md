@@ -392,3 +392,128 @@ If you used an object with a **number key**, JavaScript **converts it to a strin
 ---
 
 Let me know if you want a chart image or want to try converting an `Object` example into a `Map` version!
+
+Here’s a **visual explanation** and **documentation** of your `twoSum` function using a `Map`:
+
+---
+
+### ✅ **Goal of the Function**
+
+Given an array `nums` and a target value, find the indices of the two numbers that add up to the target.
+
+---
+
+### ✅ **Code Recap**
+
+```js
+function twoSum(nums, target) {
+    const map = new Map(); // ➊
+    for (let i = 0; i < nums.length; i++) { // ➋
+        const complement = target - nums[i]; // ➌
+        if (map.has(complement)) { // ➍
+            return [map.get(complement), i]; // ➎
+        }
+        map.set(nums[i], i); // ➏
+    }
+}
+console.log(twoSum([3, 2, 4], 6)); // [1, 2]
+```
+
+---
+
+### 🧠 **Step-by-Step Visual Description**
+
+We'll use this input:  
+📥 `nums = [3, 2, 4]`, `target = 6`
+
+---
+
+#### 📌 Step 1: Initialization
+
+```js
+const map = new Map();
+```
+
+👉 Create an empty Map to store value → index pairs.
+
+---
+
+#### 📌 Step 2: First Iteration (i = 0)
+
+```js
+nums[0] = 3
+complement = 6 - 3 = 3
+```
+
+- `map` doesn't have `3`.
+    
+- So, store `map.set(3, 0)`
+    
+- `map` becomes: `{ 3 → 0 }`
+    
+
+---
+
+#### 📌 Step 3: Second Iteration (i = 1)
+
+```js
+nums[1] = 2
+complement = 6 - 2 = 4
+```
+
+- `map` doesn't have `4`.
+    
+- So, store `map.set(2, 1)`
+    
+- `map` becomes: `{ 3 → 0, 2 → 1 }`
+    
+
+---
+
+#### 📌 Step 4: Third Iteration (i = 2)
+
+```js
+nums[2] = 4
+complement = 6 - 4 = 2
+```
+
+✅ `map` **has** `2`. So:
+
+- `map.get(2)` is `1`
+    
+- Return: `[1, 2]`
+    
+
+---
+
+### 🧾 **Documentation (Simple and Clear)**
+
+|**Part**|**Description**|
+|---|---|
+|`Map()`|Stores each number in the array as a key, and its index as the value.|
+|`complement`|The number needed to reach the `target` with `nums[i]`.|
+|`map.has()`|Checks if the complement exists — meaning we've already seen the matching pair.|
+|`map.set()`|Saves the current number and its index for future lookups.|
+|`return`|Returns the pair of indices `[map.get(complement), i]` that add up to target.|
+
+---
+
+### 📊 **Map Growth Overview**
+
+|i|nums[i]|complement|map before|map.has(complement)?|Action Taken|
+|---|---|---|---|---|---|
+|0|3|3|`{}`|❌|`map.set(3, 0)`|
+|1|2|4|`{3: 0}`|❌|`map.set(2, 1)`|
+|2|4|2|`{3: 0, 2: 1}`|✅|`return [1, 2]`|
+
+---
+
+### ✅ Final Output:
+
+```
+[1, 2]
+```
+
+---
+
+Would you like a **diagram** to visualize this map creation in memory with arrows and boxes?

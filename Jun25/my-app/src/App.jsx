@@ -10,6 +10,7 @@ import Header from './Header';
 import User from './User';
 import UserDetails from './UserDetails';
 import AddUser from './AddUser';
+import Edit from './Edit';
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/addUser" element={<AddUser />} />
         <Route path="/user/:id" element={<UserDetails />} />
         <Route path="/user/:id/:name?" element={<UserDetails />} />
+        <Route path="/edit/:id" element={<Edit />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
