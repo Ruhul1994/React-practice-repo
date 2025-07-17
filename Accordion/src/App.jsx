@@ -1,10 +1,11 @@
-
+import Accordion from "./component/Accordion"
 function App() {
 
   return (
     <>
       <div>
-        <h1>Hello Ruhul</h1>
+        {/* Importing the Accordion component */}
+        <Accordion />
       </div>
      
     </>
