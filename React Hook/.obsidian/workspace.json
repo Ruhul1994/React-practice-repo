@@ -4,63 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "5c12a25116c4527b",
+        "id": "c0b2d266ab953a89",
         "type": "tabs",
         "children": [
           {
-            "id": "7c90963aaed0a74b",
+            "id": "198fb1edc1198e41",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "leetCode problems/add up to target..md",
+                "file": "leetCode problems/isMonotonic array.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "add up to target."
-            }
-          },
-          {
-            "id": "486598a57f9882f4",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          },
-          {
-            "id": "b8b316bc85705bad",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "UI libraries.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "UI libraries"
-            }
-          },
-          {
-            "id": "cb60eac7b0435e9e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "React 19/useActionState.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "useActionState"
+              "title": "isMonotonic array"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -208,14 +169,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cb60eac7b0435e9e",
+  "active": "198fb1edc1198e41",
   "lastOpenFiles": [
+    "leetCode problems/add up to target..md",
+    "leetCode problems/isMonotonic array.md",
+    "leetCode problems/string is valid.md",
+    "leetCode problems/lastWordLength.md",
+    "leetCode problems/romanToInt.md",
     "leetCode problems/Palindromic Numbers.md",
+    "React 19/Lazy Loading....md",
+    "json-server.md",
+    "React 19/Hooks needed.md",
+    "React 19/useReducer.md",
     "UI libraries.md",
+    "React 19/useActionState.md",
     "React 19/useNavigate.md",
     "React 19/Edit Form.md",
-    "leetCode problems/add up to target..md",
-    "json-server.md",
     "React 19/UseRef HOOK.md",
     "React 19/update an object in state.md",
     "React 19/Context API.md",
@@ -227,18 +196,10 @@
     "3Month Road Map.md",
     "Roadmap25",
     "React 19/useTransition() Hook.md",
-    "React 19/useActionState.md",
     "JavaScript",
     "React 19/useParams().md",
-    "React 19/Hooks needed.md",
     "React 19/useFormStatus Hook.md",
     "React 19/Controlled Components.md",
-    "React 19/Layout Route && Index Route.md",
-    "React 19/Link vs NavLink.md",
-    "React 19/Router Optional Segment.md",
-    "React 19/Dynamic Routing.md",
-    "React 19/Custom Hook.md",
-    "React 19/updating an array by state.md",
     "Next.js 15",
     "important info for job",
     "Info daily",

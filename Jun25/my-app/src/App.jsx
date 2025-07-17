@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
+import { lazy , Suspense } from 'react';
 import Home from './Home';
-import About from './About';
 import Contact from './Contact';
 import Services from './Services';
 // import Blog from './Blog';
@@ -12,12 +12,22 @@ import UserDetails from './UserDetails';
 import AddUser from './AddUser';
 import Edit from './Edit';
 
+const About = lazy(() => import('./About'));
 const App = () => {
   return (
     <div>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route
+          path="/about"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <About />
+            </Suspense>
+          }
+        />
+        <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/services" element={<Services />} />

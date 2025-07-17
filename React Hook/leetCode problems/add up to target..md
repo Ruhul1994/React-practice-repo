@@ -517,3 +517,7 @@ complement = 6 - 4 = 2
 ---
 
 Would you like a **diagram** to visualize this map creation in memory with arrows and boxes?
+
+
+[[lastWordLength]]
+[[string is valid]]
